@@ -2,12 +2,14 @@ import React from "react";
 
 import "./index.scss";
 
-const App = () => (
+interface Props {
+  message?: string;
+}
+
+const App = ({ message = "Hello From The Micro-frontend" }: Props) => (
   <div className="mt-10 text-3xl mx-auto max-w-6xl">
     <div>Name: mf-one</div>
-    <div>Framework: react</div>
-    <div>Language: TypeScript</div>
-    <div>CSS: Tailwind</div>
+    <div>Message: {message}</div>
   </div>
 );
 
