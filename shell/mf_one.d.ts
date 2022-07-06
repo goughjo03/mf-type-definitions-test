@@ -1,7 +1,11 @@
 /// <reference types="react" />
-
 declare module "mf_one/App" {
-  const App: React.ComponentType;
-
-  export default App;
+    import "./index.scss";
+    interface Props {
+        message?: string;
+    }
+    const App: ({ message }: Props) => JSX.Element;
+    export default App;
 }
+declare module "mf_one/bootstrap" { }
+
